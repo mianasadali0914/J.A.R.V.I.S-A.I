@@ -1,0 +1,53 @@
+Install the required Python modules
+Copy and run these commands one by one.
+
+Step 1 — Upgrade pip
+    python -m pip install --upgrade pip
+
+Step 2 — Install SpeechRecognition
+        python -m pip install SpeechRecognition
+
+This handles speech recognition from your microphone.
+
+Step 3 — Install PyAudio
+         python -m pip install PyAudio
+
+This provides microphone audio input. If installation fails, your Python version may not have a compatible prebuilt package.
+
+Step 4 — Install OpenAI
+        python -m pip install openai
+
+Your code imports this library to generate AI responses.
+
+Step 5 — Install NumPy
+          python -m pip install numpy
+
+Your code imports NumPy as np.
+2. Install everything with one command
+Alternatively, run this single command:
+        python -m pip install --upgrade pip
+        python -m pip install openai SpeechRecognition PyAudio numpy
+
+Run each line separately if your terminal does not accept multiple commands as expected.
+3. Modules you do NOT need to install
+Your code also imports these modules:
+import osimport webbrowserimport datetimeimport random
+
+
+These are included with Python, so you don't need to install them with pip.
+4. Important issue with your current code
+Your original J.A.R.V.I.S. code uses:
+openai.Completion.create(    model="text-davinci-003",    ...)
+
+
+This is an older API interface, and text-davinci-003 is retired. Installing the latest openai package will not automatically make this code work. You'll need to update the AI integration.
+
+Also, your code uses macOS commands such as say and open, which will need to be changed for Windows.
+5. Verify the installations
+
+
+Run:
+python -m pip show openai
+python -m pip show SpeechRecognition
+python -m pip show PyAudio
+python -m pip show numpy
