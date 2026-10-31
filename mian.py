@@ -7,7 +7,6 @@ import datetime
 import random
 import numpy as np
 
-
 chatStr = ""
 # https://youtu.be/Z3ZAJoi4x6Q
 def chat(query):
@@ -115,4 +114,4 @@ if __name__ == '__main__':
 
 
 
-        # say(query)
+     
